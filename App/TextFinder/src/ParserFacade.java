@@ -1,4 +1,6 @@
-
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class ParserFacade {
 
@@ -60,6 +62,11 @@ public class ParserFacade {
             }
             System.out.print("\n");
         }
+    }
+
+    private static String getExtension(File file){
+        int extensionStart = file.getName().lastIndexOf(".");
+        return file.getName().substring(extensionStart+1);
     }
 
 
