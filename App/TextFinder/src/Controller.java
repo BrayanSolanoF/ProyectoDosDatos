@@ -179,6 +179,21 @@ public class Controller {
         }
     }
 
+    private void ButtonSearch(MouseEvent e){
+        searcher.search(inputField.getText());
+    }
+
+    private void ListViewClic(MouseEvent e) {
+        int index = namePane.getSelectionModel().getSelectedIndex();
+        try {
+            Desktop.getDesktop().open(documentsOnSearchPane[index]);
+            //RandomAccessFile raFile = new RandomAccessFile(documentsOnSearchPane[index], "r");
+            //raFile.seek(500);
+        } catch (IOException | NullPointerException | ArrayIndexOutOfBoundsException ex) {
+            AlertBoxes.displayAlertBox("Error", "File not found");
+        }
+    }
+
 
 }
 
