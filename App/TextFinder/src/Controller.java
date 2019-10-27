@@ -129,6 +129,24 @@ public class Controller {
         sizePane.getItems().clear();
     }
 
+    public void ButtonPlusAction(MouseEvent event){
+        FileChooser fc = new FileChooser();
+        fc.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("pdf files", "*.pdf"),
+                new FileChooser.ExtensionFilter("docx files", "*.docx"),
+                new FileChooser.ExtensionFilter("txt files", "*.txt"));
+        List<File> selectedFiles = fc.showOpenMultipleDialog(null);
+
+        if (selectedFiles != null){
+            for(int i = 0; i < selectedFiles.size(); i++){
+                libraryListView.getItems().add(selectedFiles.get(i).getName());
+                this.documents.addAll(selectedFiles);
+            }
+        } else {
+            AlertBoxes.displayResultAlertBox("Exception", "Invalid file");
+        }
+    }
+
 
 
 }
