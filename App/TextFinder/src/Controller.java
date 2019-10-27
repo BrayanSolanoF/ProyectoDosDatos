@@ -218,6 +218,33 @@ public class Controller {
 
     }
 
+    private void buttonNameUp(MouseEvent e){
+        resultsTable.getItems().clear();
+        QuickSort.quickSort(dl, 0, dl.getLength()-1);
+        this.updateResultTable();
+    }
+
+    private void buttonNameDown(MouseEvent e){
+        resultsTable.getItems().clear();
+        QuickSort.quickSort(dl, 0, dl.getLength()-1);
+        dl.reverseList();
+        this.updateResultTable();
+    }
+
+    private void buttonDateUp(MouseEvent e){
+        resultsTable.getItems().clear();
+        BubbleSort.bubbleSort(dl);
+        this.updateResultTable();
+    }
+
+    private void buttonDateDown(MouseEvent e) {
+        resultsTable.getItems().clear();
+        BubbleSort.bubbleSort(dl);
+        dl.reverseList();
+        this.updateResultTable();
+    }
+
+
 
 
 }
