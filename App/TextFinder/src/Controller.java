@@ -147,6 +147,14 @@ public class Controller {
         }
     }
 
+    private void ButtonMinus(MouseEvent event) {
+        int index = libraryListView.getSelectionModel().getSelectedIndex();
+        if (index >= 0){
+            libraryListView.getItems().remove(index);
+            this.documents.remove(index);
+        }
+    }
+
 
 
 }
