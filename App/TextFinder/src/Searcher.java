@@ -135,6 +135,12 @@ public class Searcher {
         return contexts;
     }
 
+    private String[][] getContent(File document){
+        int index= controller.getDocuments().indexOf(document);
+        String[][] content = controller.getContents().get(index);
+        return content;
+    }
+
 
 
 
