@@ -122,6 +122,13 @@ public class Controller {
         }
     }
 
+    private void clearSearchPane(){
+        textPane.getItems().clear();
+        namePane.getItems().clear();
+        datePane.getItems().clear();
+        sizePane.getItems().clear();
+    }
+
 
 
 }
