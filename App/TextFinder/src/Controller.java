@@ -50,6 +50,14 @@ public class Controller {
     @FXML
     TableColumn dateColumn;
 
+    //ordenamiento
+    @FXML
+    Button textUpBtn;
+    @FXML
+    Button textDownBtn;
+    @FXML
+    Button nameUpBtn;
+
 
 
 }
