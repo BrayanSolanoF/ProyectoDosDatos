@@ -73,6 +73,59 @@ public class Searcher {
         return ocurrenceList;
     }
 
+    public WordOcurrences getRealOcurrences(WordOcurrences wordOcurrences, String[] phrase){
+        int size = wordOcurrences.getDocuments().size();
+        File document;
+        int lineNumber;
+        int linePos;
+        boolean error=false;
+
+        ArrayList<File> finalDocs = new ArrayList<>();
+        ArrayList<Integer> finalLineNumber = new ArrayList<>();
+        ArrayList<Integer>  finalLinePos = new ArrayList<>();
+
+        for(int i = 0; i < size; i++){
+            document = wordOcurrences.getDocuments().get(i);
+            String[][] content =this.getContent(document);
+            lineNumber=wordOcurrences.getLineNumber().get(i);
+            linePos=wordOcurrences.getLinePos().get(i);
+
+            int index1= lineNumber;
+            int index2= linePos;
+            for(int j=0;j<phrase.length;j++){
+                try {
+                    error= !content[index1][index2].equals(phrase[j]);
+                    if (error){
+                        break;
+                    }
+                    index2++;
+                }catch (IndexOutOfBoundsException e){
+                    index1++;
+                    if(index1<content.length) {
+
+                        index2 = 0;
+                        j--;
+                    }else{
+                        error=true;
+                        break;
+                    }
+                }
+            }
+
+            if(!error){
+                finalDocs.add(document);
+                finalLineNumber.add(lineNumber);
+                finalLinePos.add(linePos);
+            }
+        }
+
+        WordOcurrences result=new WordOcurrences();
+        result.setDocuments(finalDocs);
+        result.setLineNumber(finalLineNumber);
+        result.setLinePos(finalLinePos);
+        return result;
+    }
+
 
 
 
