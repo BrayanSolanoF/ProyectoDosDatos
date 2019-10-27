@@ -142,6 +142,25 @@ public class Searcher {
     }
 
 
+    private String getContext(File document, int lineNumber, int linePos){
+        String[][] content =this.getContent(document);
+        String context="...";
+
+        for(int j=linePos-5;j<linePos+5;j++){
+            try {
+
+
+                if (content[lineNumber][j] != null) {
+                    context += content[lineNumber][j]+" ";
+                }
+            }catch (IndexOutOfBoundsException e){
+
+            }
+        }
+
+        return context+"...";
+    }
+
 
 
 
