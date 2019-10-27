@@ -35,6 +35,22 @@ public class Tree {
         wordOcurrences.getLinePos().add(linePos);
     }
 
+    public WordOcurrences getOcurrences(String word){
+        return this.getOcurrences(word, root);
+    }
+
+    private WordOcurrences getOcurrences(String word, Node root){
+        if(root==null){
+            return null;
+        }else if(root.getWord().equals(word)){
+            return root.getWordOcurrences();
+        }else if(root.getWord().compareTo(word)>0){
+            return this.getOcurrences(word, root.getLeft());
+        }else{
+            return this.getOcurrences(word, root.getRigth());
+        }
+    }
+
 
 
 }
