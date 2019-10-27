@@ -1,3 +1,4 @@
+import java.io.File;
 
 public class Tree {
 
@@ -49,6 +50,13 @@ public class Tree {
         }else{
             return this.getOcurrences(word, root.getRigth());
         }
+    }
+
+    public static Tree getInstance(){
+        if(instance==null){
+            instance=new Tree();
+        }
+        return instance;
     }
 
 
