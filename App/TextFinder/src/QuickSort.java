@@ -25,6 +25,14 @@ public class QuickSort {
             }
         }
 
+        
+        if (beginning < j)
+            quickSort(dl, beginning, j);
+
+        if (end > i)
+            quickSort(dl, i, end);
+    }
+
 
 }
 
