@@ -52,6 +52,15 @@ public class Searcher {
         return names;
     }
 
+    private String[] getSizes(ArrayList<File> documents) throws IOException {
+        String[] sizes = new String[documents.size()];
+        for (int i = 0; i<documents.size();i++){
+            sizes[i]= documents.get(i).length() +" bytes";
+        }
+        return sizes;
+    }
+
+
 
 
 
