@@ -194,6 +194,31 @@ public class Controller {
         }
     }
 
+    public ObservableList<Documents> getIndexedDocuments(Mi_Lista dl){
+        ObservableList<Documents> files = FXCollections.observableArrayList();
+        for(int i = 0; i < dl.getLength(); i++){
+            files.add(dl.get(i));
+        }
+        System.out.println(files);
+        return files;
+    }
+
+    private void updateResultTable(){
+        textColumn.setCellValueFactory(new PropertyValueFactory<>("text"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        sizeColumn.setCellValueFactory(new PropertyValueFactory<>("size"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+        textColumn.setSortable(false);
+        nameColumn.setSortable(false);
+        sizeColumn.setSortable(false);
+        dateColumn.setSortable(false);
+
+        resultsTable.setItems(getIndexedDocuments(dl));
+
+    }
+
+
 
 }
 
