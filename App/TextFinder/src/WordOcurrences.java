@@ -15,6 +15,13 @@ public class WordOcurrences {
         this.linePos = new ArrayList<>();
     }
 
+    public ArrayList<File> getDocuments() {
+        return documents;
+    }
+
+    public void setDocuments(ArrayList<File> documents) {
+        this.documents = documents;
+    }
 
 
 }
