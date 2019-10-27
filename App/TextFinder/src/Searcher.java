@@ -161,6 +161,18 @@ public class Searcher {
         return context+"...";
     }
 
+    private String[] decomposePhrase(String phrase){
+        String[] split=phrase.split(" ");
+        ArrayList<String> noSpacesSplit=new ArrayList<>();
+        for(String word: split){
+            if(!word.equals("")){
+                noSpacesSplit.add(word);
+            }
+        }
+        split= noSpacesSplit.toArray(split);
+        return split;
+    }
+
 
 
 
