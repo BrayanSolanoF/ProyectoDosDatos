@@ -49,6 +49,19 @@ public class ParserFacade {
         return content;
     }
 
+    private static void updateTree(File doc, String[][] content){
+        Tree tree= Tree.getInstance();
+        for(int i = 0; i< content.length; i++){
+            for(int j = 0; j< content[i].length; j++) {
+                if (content[i][j] != null) {
+                    System.out.print(content[i][j]+" ");
+                    tree.add(content[i][j], doc, i, j);
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+
 
 
 }
