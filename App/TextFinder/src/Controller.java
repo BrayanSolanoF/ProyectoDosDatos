@@ -58,6 +58,15 @@ public class Controller {
     @FXML
     Button nameUpBtn;
 
+    @FXML
+    Button sizeUpBtn;
+    @FXML
+    Button sizeDownBtn;
+    @FXML
+    Button dateUpBtn;
+    @FXML
+    Button dateDownBtn;
+
 
 
 }
