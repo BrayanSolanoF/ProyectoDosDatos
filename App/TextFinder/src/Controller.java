@@ -155,6 +155,29 @@ public class Controller {
         }
     }
 
+    public List<File> getDocuments() {
+        return documents;
+    }
+
+    public ArrayList<String[][]> getContents() {
+        return contents;
+    }
+
+
+    private void ButtonIndex(MouseEvent event){
+        contents=new ArrayList<>();
+        Tree tree= Tree.getInstance();
+        tree.clear();
+        for(File doc:this.documents){
+            try {
+                contents.add(ParserFacade.parse(doc));
+            } catch ( IOException e) {
+                AlertBoxes.displayAlertBox("Error", "An error has ocurred while reading "+doc.getName());
+                String[][] result={{""}};
+                contents.add(result);
+            }
+        }
+    }
 
 
 }
