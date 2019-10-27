@@ -109,6 +109,19 @@ public class Controller {
         dateColumn.setResizable(false);
     }
 
+    public void updateSearchPane(ArrayList<File> documents,String[] text, String[] names, String[] dates, String [] sizes) {
+        this.clearSearchPane();
+        this.documentsOnSearchPane = documents.toArray(new File[documents.size()]);
+        for (int i = 0; i < text.length; i++) {
+            try {
+                dl.addLast(new Documents(text[i], names[i], sizes[i], dates[i].substring(0, 10)));
+            } catch (MalformedURLException e) {
+                AlertBoxes.displayAlertBox("Exception", "An error occurred with the file");
+            }
+            this.updateResultTable();
+        }
+    }
+
 
 
 }
