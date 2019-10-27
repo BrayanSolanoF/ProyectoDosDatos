@@ -126,6 +126,15 @@ public class Searcher {
         return result;
     }
 
+    protected String[] getContext(WordOcurrences wordOcurrences){
+        int size = wordOcurrences.getDocuments().size();
+        String[] contexts= new String[size];
+        for(int i=0;i<size;i++){
+            contexts[i]=this.getContext(wordOcurrences.getDocuments().get(i),wordOcurrences.getLineNumber().get(i),wordOcurrences.getLinePos().get(i));
+        }
+        return contexts;
+    }
+
 
 
 
