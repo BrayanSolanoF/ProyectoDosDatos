@@ -44,6 +44,15 @@ public class Searcher {
         }
     }
 
+    private String[] getNames(ArrayList<File> documents){
+        String[] names = new String[documents.size()];
+        for (int i = 0; i<documents.size();i++){
+            names[i]=documents.get(i).getName();
+        }
+        return names;
+    }
+
+
 
 
 }
