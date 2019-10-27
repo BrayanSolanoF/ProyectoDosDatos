@@ -23,6 +23,23 @@ public class WordOcurrences {
         this.documents = documents;
     }
 
+    public ArrayList<Integer> getLineNumber() {
+        return lineNumber;
+    }
+
+    public void setLineNumber(ArrayList<Integer> lineNumber) {
+        this.lineNumber = lineNumber;
+    }
+
+    public ArrayList<Integer> getLinePos() {
+        return linePos;
+    }
+
+    public void setLinePos(ArrayList<Integer> linePos) {
+        this.linePos = linePos;
+    }
+
+
 
 }
 
