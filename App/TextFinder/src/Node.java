@@ -22,6 +22,23 @@ public class Node {
         this.left = left;
     }
 
+    public Node getRigth() {
+        return rigth;
+    }
+
+    public void setRigth(Node rigth) {
+        this.rigth = rigth;
+    }
+
+    public WordOcurrences getWordOcurrences() {
+        return wordOcurrences;
+    }
+
+
+    public String getWord() {
+        return word;
+    }
+
 
 }
 
