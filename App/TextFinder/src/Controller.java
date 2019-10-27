@@ -37,6 +37,19 @@ public class Controller {
     @FXML
     ListView libraryListView;
 
+    @FXML
+    TableView<Documents> resultsTable;
+
+    //tabla
+    @FXML
+    TableColumn textColumn;
+    @FXML
+    TableColumn nameColumn;
+    @FXML
+    TableColumn sizeColumn;
+    @FXML
+    TableColumn dateColumn;
+
 
 
 }
