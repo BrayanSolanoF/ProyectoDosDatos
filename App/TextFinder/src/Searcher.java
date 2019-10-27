@@ -68,6 +68,12 @@ public class Searcher {
         return dates;
     }
 
+    private WordOcurrences searchWord(String word){
+        WordOcurrences ocurrenceList= this.tree.getOcurrences(word);
+        return ocurrenceList;
+    }
+
+
 
 
 
