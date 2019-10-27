@@ -60,6 +60,14 @@ public class Searcher {
         return sizes;
     }
 
+    private String[] getDates(ArrayList<File> documents) throws IOException {
+        String[] dates = new String[documents.size()];
+        for (int i = 0; i<documents.size();i++){
+            dates[i]= Files.readAttributes(documents.get(i).toPath(), BasicFileAttributes.class).creationTime().toString();
+        }
+        return dates;
+    }
+
 
 
 
