@@ -67,6 +67,48 @@ public class Controller {
     @FXML
     Button dateDownBtn;
 
+    @FXML
+    AnchorPane searchPane;
+
+    @FXML
+    VBox libraryPane;
+
+    Searcher searcher;
+
+    File[] documentsOnSearchPane;
+
+    ArrayList<File> documents;
+
+    ArrayList<String[][]> contents;
+
+    Mi_Lista dl = new Mi_Lista();
+
+    public Controller(){}
+
+    @FXML
+    public void initialize(){
+        documents = new ArrayList<>();
+        addBtn.setOnMouseClicked(this::ButtonPlusAction);
+        deleteBtn.setOnMouseClicked(this::ButtonMinus);
+        indexBtn.setOnMouseClicked(this::ButtonIndex);
+        searchBtn.setOnMouseClicked(this::ButtonSearch);
+        namePane.setOnMouseClicked(this::ListViewClic);
+
+        nameUpBtn.setOnMouseClicked(this::buttonNameUp);
+        //nameDownBtn.setOnMouseClicked(this::buttonNameDown);
+
+        dateUpBtn.setOnMouseClicked(this::buttonDateUp);
+        dateDownBtn.setOnMouseClicked(this::buttonDateDown);
+
+        searcher=new Searcher(this);
+        inputField.setPromptText("Insert a word or phrase");
+        //deleteBtn.setGraphic(new ImageView(new Image("imgs/icon1.png")));
+        textColumn.setResizable(false);
+        nameColumn.setResizable(false);
+        sizeColumn.setResizable(false);
+        dateColumn.setResizable(false);
+    }
+
 
 
 }
