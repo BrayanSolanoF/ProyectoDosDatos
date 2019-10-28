@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public class ParserFacade {
 
+    /**
+     * Recibe un archivo y determina su formato, luego lee los contenidos utilizando la
+     * clase apropiada para el formato y retorna los contenidos.
+     * @param file
+     * @return Contenidos del archivo
+     * @throws IOException
+     */
+
     public static String[][] parse(File file) throws  IOException {
         String extension = getExtension(file);
         String[] lines;
@@ -30,6 +38,12 @@ public class ParserFacade {
 
     }
 
+    /**
+     * Retorna una matriz con cada palabra de un texto
+     * @param lines
+     * @return String[][] contenido
+     */
+
     private static String[][] toBidemensionalArray(String[] lines){
         String[][] content = new String[lines.length][1];
         for(int i =0;i<lines.length;i++) {
@@ -51,6 +65,10 @@ public class ParserFacade {
         return content;
     }
 
+    /**
+     * Actualiza el arbol de palabras con los contenidos del nuevo documento
+     */
+
     private static void updateTree(File doc, String[][] content){
         Tree tree= Tree.getInstance();
         for(int i = 0; i< content.length; i++){
@@ -63,6 +81,12 @@ public class ParserFacade {
             System.out.print("\n");
         }
     }
+
+    /**
+     * Determina el formato de un archivo y retorna un String con el mismo
+     * @param file
+     * @return String formato
+     */
 
     private static String getExtension(File file){
         int extensionStart = file.getName().lastIndexOf(".");
