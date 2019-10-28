@@ -170,7 +170,7 @@ public class Mi_Lista{
             this.first = previous.prev;
         }
     }
-    
+
     /**
      * Retorna el tamaño de la lista
      * @return int Tamaño
