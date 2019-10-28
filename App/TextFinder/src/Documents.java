@@ -15,6 +15,14 @@ public class Documents {
     protected Documents next = null;
     protected Documents prev = null;
 
+    /**
+     * Crea un nodo Documents con el texto, nombre, tamaño y fecha ingresados
+     * @param text
+     * @param name
+     * @param size
+     * @param date
+     */
+
     public Documents(String text, String name, String size, String date) {
         this.text = text;
         this.name = name;
@@ -22,6 +30,12 @@ public class Documents {
         this.date = date;
         this.realSize = toInt(this.size);
     }
+
+    /**
+     * Con este método se calcula el peso del documento a partir del String ingresado
+     * @param size
+     * @return int
+     */
 
     public static int toInt(String size){
         String subSize[] = size.split(" ");
@@ -43,36 +57,85 @@ public class Documents {
         return result;
     }
 
+    /**
+     * Retorna el texto del documento
+     * @return text
+     */
+
 
     public String getText() { return text; }
 
+    /**
+     * Establece el texto del documento
+     * @param text
+     */
+
     public void setText(String text) { this.text = text; }
+
+    /**
+     * Retorna el nombre del documento
+     * @return Nombre
+     */
 
     public String getName() {
         return name;
     }
 
+    /**
+     * Establece el nombre del documento
+     * @param name
+     */
+
     public void setName(String name) {
         this.name = name;
     }
+
+    /**
+     * Retorna el tamaño del documento
+     * @return Tamaño
+     */
 
     public String getSize() {
         return size;
     }
 
+    /**
+     * Establece el tamaño del documento
+     * @param size
+     */
+
     public void setSize(String size) {
         this.size = size;
     }
+
+    /**
+     * Retorna la fecha del documento
+     * @return Fecha
+     */
 
     public String getDate() {
         return date;
     }
 
+    /**
+     * Establece la fecha del documento
+     * @param date
+     */
+
     public void setDate(String date) {
         this.date = date;
     }
+    /**
+     * Retorna el tamaño del documento como un número entero
+     * @return int Tamaño
+     */
 
     public int getRealSize() { return realSize; }
+
+    /**
+     * Establece el tamaño del documento como un número entero
+     * @param realSize
+     */
 
     public void setRealSize(int realSize) { this.realSize = realSize; }
 
