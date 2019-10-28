@@ -10,6 +10,13 @@ import java.io.IOException;
  */
 public class PdfReader {
 
+    /**
+     * Retorna un String[] con el texto extraído del documento .pdf
+     * @param path
+     * @return String[] texto
+     * @throws IOException
+     */
+
     public static String[] pdfReader (String path) throws IOException {
         PDDocument document = PDDocument.load(new File(path));
         if (!document.isEncrypted()) {
