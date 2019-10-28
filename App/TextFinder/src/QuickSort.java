@@ -5,9 +5,9 @@ public class QuickSort {
             AlertBoxes.displayAlertBox("Exception", "Empty library");
         if (beginning >= end)
             return;
-
+        //Elije el pivote
         Documents pivot = dl.get(beginning + (end - beginning) / 2);
-
+        //Hace izquierdo menor al pivote y derecho mayor al pivote
         int i = beginning, j = end;
         while (i <= j) {
             while (dl.get(i).getName().compareTo(pivot.getName()) < 0) {
@@ -25,7 +25,7 @@ public class QuickSort {
             }
         }
 
-
+        //Parte recursiva necesaria
         if (beginning < j)
             quickSort(dl, beginning, j);
 
