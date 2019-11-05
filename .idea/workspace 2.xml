@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc9f1c51-d2fa-4270-85c7-a9504e040768" name="Default Changelist" comment="" />
+    <list default="true" id="2763b996-22e9-4edc-a27a-f74e5e9cd174" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="1SokKR7yhsWJ1KMUHLK0Bj1Q4AK" />
+  <component name="ProjectId" id="1SmhrRIcvws7R0zo49xs8mCxKWl" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pdfbox-app-2.0.17.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -43,17 +44,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fc9f1c51-d2fa-4270-85c7-a9504e040768" name="Default Changelist" comment="" />
-      <created>1572237271904</created>
+      <changelist id="2763b996-22e9-4edc-a27a-f74e5e9cd174" name="Default Changelist" comment="" />
+      <created>1572174877330</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572237271904</updated>
-      <workItem from="1572237275224" duration="145000" />
-      <workItem from="1572799607808" duration="4176000" />
-      <workItem from="1572919962478" duration="1324000" />
-      <workItem from="1572921342561" duration="863000" />
-      <workItem from="1572931353068" duration="563000" />
-      <workItem from="1572931965871" duration="245000" />
+      <updated>1572174877330</updated>
+      <workItem from="1572174882475" duration="7516000" />
+      <workItem from="1572218215838" duration="5659000" />
     </task>
     <servers />
   </component>
