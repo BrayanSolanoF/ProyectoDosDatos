@@ -1,0 +1,24 @@
+Listas
+Java 
+Patrones
+UML
+7 Compuertas
+Dras & drop
+Conexiones entre compuertas 
+Lineas con color
+Generar una tabla de verdad
+ Crear una nueva compuerta
+Lista representa compuertas e interconexiones
+Switches
+No puedo conectar switches a salidas
+Guardar archivos XML/JASON
+Utilizo 
+Elemento vacío
+
+Elemento
+-Entradas:<List<elementos>>
+-Salidas:<List<elementos>>
+-valor: booleano
+
++operar( )
+-Buscar en la lista de entras un 1 o un 0 y ejecutar la operación designada
